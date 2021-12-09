@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial';
+            background: #3d3b3b;
+            color: wheat;
+        }
+        .wrapper {
+            text-align: center;
+        }
+        main {
+            text-align-last: center;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .key-container {
+            display: inline-block;
+            font-size: 5rem;
+            border: 2px dashed wheat;
+            width: 100px;
+            height: 100px;
+            margin-top: 200px;
+        }
+        .key-chance-panel {
+            display: flex;
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+        .key-chance-item {
+            position: relative;
+            padding: 10px;
+        }
+        .key-chance-inc {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: -30px;
+            font-size: 1rem;
+        }
+        .key-chance-inc:hover {
+            color: #676262;
+            cursor: pointer;
+        }
+
+        .key-chance-dec {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -30px;
+            font-size: 1rem;
+        }
+        .key-chance-dec:hover {
+            color: #676262;
+            cursor: pointer;
+        }
+        .key-chance-value {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: -60px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="key-chance-panel"></div>
+            <div class="key-container"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

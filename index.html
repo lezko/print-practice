@@ -7,26 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Print Practice</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        html,body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: 'Arial';
+            font-family: 'Arial', serif;
             background: #3d3b3b;
             color: wheat;
         }
         .wrapper {
             text-align: center;
+            height: 100%;
         }
         main {
             text-align-last: center;
             display: inline-block;
-            margin-top: 30px;
+            padding-top: 70px;
+            height: 100%;
         }
         .key-container {
-            display: inline-block;
+            position: absolute;
             font-size: 5rem;
             border: 2px dashed wheat;
             width: 100px;
             height: 100px;
-            margin-top: 200px;
+        }
+        .key-wrapper {
+            position: relative;
+            height: 500px;
+            margin-top: 30px;
+            border: 2px solid #575454;
         }
         .key-chance-panel {
             display: flex;
@@ -64,7 +79,7 @@
             position: absolute;
             width: 100%;
             left: 0;
-            top: -60px;
+            top: -80px;
             font-size: 1rem;
         }
     </style>
@@ -73,7 +88,9 @@
     <div class="wrapper">
         <main>
             <div class="key-chance-panel"></div>
-            <div class="key-container"></div>
+            <div class="key-wrapper">
+                <div class="key-container"></div>
+            </div>
         </main>
     </div>
     <script src="script.js"></script>

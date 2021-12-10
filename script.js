@@ -1,5 +1,6 @@
 const displayKey = document.querySelector('.key-container');
 const keyChancePanel = document.querySelector('.key-chance-panel');
+const keyWrapper = document.querySelector('.key-wrapper');
 
 const keys = [
     'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ',
@@ -25,7 +26,7 @@ const keyChanceItems = document.querySelectorAll('.key-chance-item');
 
 const keysWithChance = {};
 let chanceSegmentSize = 0;
-const CHANCE_RATIO = 2;
+const CHANCE_RATIO = 4;
 
 keys.forEach(key => {
     keysWithChance[key] = {};
@@ -81,9 +82,14 @@ const generateKey = () => {
     
     for (const key in keysWithChance) {
         const item = keysWithChance[key];
+        displayKey.textContent = '';
         
         if (index >= item.startPoint && index <= item.finishPoint) {
-            displayKey.textContent = key;
+            setTimeout(() => {
+                displayKey.textContent = key, 10;
+                displayKey.style.left = `${Math.floor(Math.random() * (keyWrapper.clientWidth - 200 + 1)) + 100}px`;
+                displayKey.style.top = `${Math.floor(Math.random() * (keyWrapper.clientHeight - 200 + 1)) + 100}px`;
+            });
         }
     }
 }
